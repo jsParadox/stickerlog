@@ -1,0 +1,331 @@
+/* Base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #2c3e50;
+    color: white;
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 5px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.nav-links a:hover {
+    background-color: #34495e;
+}
+
+.nav-links a.active {
+    background-color: #3498db;
+}
+
+/* Gallery Page */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.sticker-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.sticker-card:hover {
+    transform: translateY(-5px);
+}
+
+.sticker-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.sticker-card-content {
+    padding: 1rem;
+}
+
+.sticker-card h3 {
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+}
+
+/* Upload Page */
+.upload-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.image-preview {
+    margin-top: 1rem;
+    max-width: 300px;
+}
+
+.image-preview img {
+    width: 100%;
+    border-radius: 4px;
+}
+
+/* Wiki Layout */
+.wiki-layout {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 2rem;
+}
+
+.wiki-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+.wiki-content {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+}
+
+.wiki-sidebar {
+    position: sticky;
+    top: 2rem;
+}
+
+.sticker-image-main {
+    margin-bottom: 1.5rem;
+}
+
+.sticker-image-main img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.image-caption {
+    font-size: 0.9rem;
+    color: #666;
+    text-align: center;
+}
+
+.wiki-info-box {
+    background: #f8f9fa;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
+}
+
+.wiki-info-box ul {
+    list-style: none;
+}
+
+.wiki-info-box li {
+    margin-bottom: 0.5rem;
+}
+
+.wiki-main-content {
+    min-height: 500px;
+}
+
+.wiki-text {
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.wiki-text h2 {
+    margin: 2rem 0 1rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #ddd;
+}
+
+.wiki-text p {
+    margin-bottom: 1rem;
+}
+
+/* Map */
+#map {
+    height: 400px;
+    width: 100%;
+    border-radius: 8px;
+    margin: 1rem 0;
+}
+
+/* Sightings */
+.sightings-section {
+    margin-top: 3rem;
+}
+
+.sightings-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sighting-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.sighting-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.sighting-info {
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Buttons */
+button {
+    background-color: #3498db;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+.wiki-edit-button {
+    background-color: #2ecc71;
+}
+
+.wiki-edit-button:hover {
+    background-color: #27ae60;
+}
+
+.editor-buttons {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+/* Status messages */
+#upload-status {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.success {
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+}
+
+.error {
+    background-color: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Responsive design */
+@media (max-width: 900px) {
+    .wiki-content {
+        grid-template-columns: 1fr;
+    }
+
+    .wiki-sidebar {
+        position: static;
+        max-width: 400px;
+        margin: 0 auto 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 10px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+
+    .wiki-layout {
+        padding: 1rem;
+    }
+}

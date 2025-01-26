@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{sticker.name}} - NYC Sticker Wiki</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <h1>NYC Sticker Wiki</h1>
+                <div class="nav-links">
+                    <a href="/">Gallery</a>
+                    <a href="/upload">Upload New Sticker</a>
+                </div>
+            </nav>
+        </header>
+
+        <main class="wiki-layout">
+            <article class="wiki-article">
+                <header class="wiki-header">
+                    <h1 id="sticker-title" data-sticker-id="{{sticker.id}}">{{sticker.name}}</h1>
+                    <div class="wiki-tools">
+                        <button id="edit-wiki" class="wiki-edit-button">Edit</button>
+                    </div>
+                </header>
+
+                <div class="wiki-content">
+                    <div class="wiki-sidebar">
+                        <div class="sticker-image-main">
+                            <img src="/uploads/stickers/{{sticker.id}}_sticker.jpg" alt="{{sticker.name}}">
+                            <p class="image-caption">Original sticker photo</p>
+                        </div>
+                        <div class="wiki-info-box">
+                            <h3>Quick Facts</h3>
+                            <ul>
+                                <li><strong>First Spotted:</strong> <span id="first-spotted">{{first_spotted}}</span></li>
+                                <li><strong>Total Sightings:</strong> <span id="sighting-count">{{sighting_count}}</span></li>
+                                <li><strong>Last Updated:</strong> <span id="last-updated">{{last_updated}}</span></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="wiki-main-content">
+                        <div id="wiki-display" class="wiki-text">
+                            {{wiki_content|safe}}
+                        </div>
+                        
+                        <div id="wiki-editor" class="hidden">
+                            <textarea id="wiki-text"></textarea>
+                            <div class="editor-buttons">
+                                <button id="save-wiki">Save Changes</button>
+                                <button id="cancel-wiki">Cancel</button>
+                            </div>
+                        </div>
+
+                        <section class="sightings-section">
+                            <h2>Sightings</h2>
+                            <div id="map" class="sightings-map"></div>
+                            <div class="sightings-gallery" id="sightings-list">
+                                <!-- Sightings will be loaded here -->
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </article>
+        </main>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="/static/js/sticker.js"></script>
+</body>
+</html>
